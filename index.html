@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dytanospace | Personal Blog & Portofolio</title>
+  <meta name="description" content="Website blog pribadi dytanospace - Esai, opini, portofolio proyek bisnis, public relations, komunikasi, dan isu lingkungan dengan perspektif mendalam.">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dytanospace.com/">
+  <meta property="og:title" content="dytanospace | Personal Blog & Portofolio">
+  <meta property="og:description" content="Website blog pribadi dytanospace - Esai, opini, portofolio proyek bisnis, public relations, komunikasi, dan isu lingkungan dengan perspektif mendalam.">
+  <meta property="og:image" content="file:///Users/rhevalinoarmadytagmail.com/.gemini/antigravity/brain/42aa2b49-3a3a-42ee-83c2-ce8444a3f114/profile_avatar_1781223201095.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://dytanospace.com/">
+  <meta property="twitter:title" content="dytanospace | Personal Blog & Portofolio">
+  <meta property="twitter:description" content="Website blog pribadi dytanospace - Esai, opini, portofolio proyek bisnis, public relations, komunikasi, dan isu lingkungan dengan perspektif mendalam.">
+  <meta property="twitter:image" content="file:///Users/rhevalinoarmadytagmail.com/.gemini/antigravity/brain/42aa2b49-3a3a-42ee-83c2-ce8444a3f114/profile_avatar_1781223201095.png">
+
+  <!-- Styling -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Sticky Header Nav -->
+  <header>
+    <div class="container nav-container">
+      <!-- Logo (kiri) — klik buka profil, bukan link ke home -->
+      <span class="logo" id="profile-trigger" role="button" tabindex="0" aria-label="Buka profil pengguna">dytanospace</span>
+
+      <!-- Nav links (tengah, flex-end) -->
+      <nav>
+        <ul class="nav-links" id="nav-links-menu">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="index.html?cat=news">News</a></li>
+          <li><a href="index.html?cat=business">Business</a></li>
+          <li><a href="index.html?cat=sport">Sport</a></li>
+          <li><a href="index.html?cat=tech">Tech</a></li>
+          <li><a href="index.html?cat=hype">Hype</a></li>
+          <li><a href="index.html?cat=korea">Korea</a></li>
+          <li><a href="index.html?cat=life">Life</a></li>
+          <li><a href="index.html?cat=health">Health</a></li>
+          <li><a href="index.html?cat=automotive">Automotive</a></li>
+          <li><a href="index.html?cat=food">Food</a></li>
+          <li><a href="index.html?cat=travel">Travel</a></li>
+          <li><a href="index.html?cat=science">Science</a></li>
+          <li><a href="index.html?cat=men">Men</a></li>
+          <li><a href="contact.html">Kontak</a></li>
+        </ul>
+      </nav>
+
+      <!-- Hamburger (paling kanan) -->
+      <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+    </div>
+  </header>
+
+  <!-- Sub-header Tag Bar (For You) -->
+  <div class="sub-header-bar">
+    <div class="container sub-header-container">
+      <span class="sub-header-title">For You</span>
+      <div class="sub-header-tags" id="sub-header-tags-container">
+        <!-- Filled dynamically by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Overlay Section -->
+  <section class="container" style="margin-top: 24px; display: flex; justify-content: flex-end;">
+    <div class="search-box">
+      <span class="search-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </span>
+      <input type="text" id="search-input" class="search-input" placeholder="Cari artikel...">
+    </div>
+  </section>
+
+  <!-- Main Layout: Trending (Left) & Sidebar Widgets (Right) -->
+  <main class="container main-layout" style="padding-top: 20px;">
+    
+    <!-- Left Column: Trending Section -->
+    <section>
+      <h2 class="section-title-simple">Trending</h2>
+      <div class="trending-list" id="trending-container">
+        <!-- Dynamically filled by JS -->
+        <div style="text-align: center; padding: 40px; color: var(--text-secondary);">
+          <span>Memuat artikel trending...</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Right Column: Sidebar Widgets -->
+    <aside class="sidebar">
+      
+      <!-- Widget 1: Rekomendasi Esai -->
+      <div class="widget reveal fade-left">
+        <h3 class="widget-title" style="font-size: 1rem; border-bottom: 2px solid var(--accent); padding-bottom: 6px; width: fit-content; margin-bottom: 20px;">Rekomendasi Esai</h3>
+        <div class="rekomendasi-list" id="rekomendasi-container">
+          <!-- Dynamically filled by JS -->
+          <div style="color: var(--text-muted); font-size: 0.85rem;">Memuat rekomendasi...</div>
+        </div>
+      </div>
+
+      <!-- Widget 2: Trending Topics -->
+      <div class="widget reveal fade-left">
+        <h3 class="widget-title" style="font-size: 1rem; border-bottom: 2px solid var(--accent); padding-bottom: 6px; width: fit-content; margin-bottom: 20px;">Trending Topics</h3>
+        <div class="topics-list" id="trending-topics-container">
+          <!-- Dynamically filled by JS -->
+          <div style="color: var(--text-muted); font-size: 0.85rem;">Memuat topik hangat...</div>
+        </div>
+      </div>
+
+    </aside>
+
+  </main>
+
+  <!-- Regional Category Slider Section -->
+  <section class="container regional-section reveal">
+    <h2 class="regional-title">Kategori Pilihan</h2>
+    <div class="regional-grid" id="regional-categories-container">
+      <!-- Dynamically filled by JS -->
+    </div>
+  </section>
+
+  <!-- Latest Grid Section -->
+  <section class="container" style="padding-bottom: 80px;">
+    <h2 class="section-title-simple">Terbaru dari dytanospace</h2>
+    <div class="articles-grid" id="latest-grid-container">
+      <!-- Dynamically filled by JS -->
+      <div style="grid-column: 1 / -1; text-align: center; padding: 60px; color: var(--text-secondary);">
+        <span>Memuat artikel terbaru...</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="brand-logo">dytanospace</div>
+        <p class="brand-desc">Refleksi, esai, dan opini mengenai persimpangan antara relasi publik, kewirausahaan modern, dan keberlanjutan ekologi.</p>
+      </div>
+      
+      <div>
+        <h3 class="footer-title">Kategori</h3>
+        <ul class="footer-links">
+          <li><a href="index.html?cat=business">Business</a></li>
+          <li><a href="index.html?cat=news">News</a></li>
+          <li><a href="index.html?cat=life">Life</a></li>
+          <li><a href="index.html?cat=science">Science</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-title">Halaman</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="contact.html">Kontak &amp; Jadwal</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Rhevalino Armadyta. Hak cipta dilindungi undang-undang.</p>
+      <p>Didesain dengan Keanggunan &amp; Profesionalisme</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+  <script src="js/firebase-config.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

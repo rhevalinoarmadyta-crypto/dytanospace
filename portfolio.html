@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio & Proyek | dytanospace</title>
+  <meta name="description" content="Koleksi proyek profesional, studi kasus public relations, dan kampanye lingkungan oleh Rhevalino Armadyta.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dytanospace.com/portfolio.html">
+  <meta property="og:title" content="Portofolio & Proyek | dytanospace">
+  <meta property="og:description" content="Koleksi proyek profesional, studi kasus public relations, dan kampanye lingkungan oleh Rhevalino Armadyta.">
+  <meta property="og:image" content="file:///Users/rhevalinoarmadytagmail.com/.gemini/antigravity/brain/42aa2b49-3a3a-42ee-83c2-ce8444a3f114/project_concept_1781223276696.png">
+
+  <!-- Styling -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Sticky Header Nav -->
+  <header>
+    <div class="container nav-container">
+      <span class="logo" id="profile-trigger" role="button" tabindex="0" aria-label="Buka profil pengguna">dytanospace</span>
+      
+      <!-- Hamburger Menu for Mobile -->
+      <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle Menu">☰</button>
+      
+      <nav>
+        <ul class="nav-links" id="nav-links-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html?cat=news">News</a></li>
+          <li><a href="index.html?cat=business">Business</a></li>
+          <li><a href="index.html?cat=sport">Sport</a></li>
+          <li><a href="index.html?cat=tech">Tech</a></li>
+          <li><a href="index.html?cat=hype">Hype</a></li>
+          <li><a href="index.html?cat=korea">Korea</a></li>
+          <li><a href="index.html?cat=life">Life</a></li>
+          <li><a href="index.html?cat=health">Health</a></li>
+          <li><a href="index.html?cat=automotive">Automotive</a></li>
+          <li><a href="index.html?cat=food">Food</a></li>
+          <li><a href="index.html?cat=travel">Travel</a></li>
+          <li><a href="index.html?cat=science">Science</a></li>
+          <li><a href="index.html?cat=men">Men</a></li>
+          <li class="active"><a href="portfolio.html">Portofolio</a></li>
+          <li><a href="contact.html">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Portfolio Header -->
+  <section class="portfolio-header container">
+    <span class="portfolio-subtitle">Karya Nyata & Studi Kasus</span>
+    <h1 class="portfolio-title">Portofolio & Proyek</h1>
+    <p class="portfolio-desc">Kombinasi antara keahlian taktis public relations, strategi bisnis berkelanjutan, dan komitmen mendalam terhadap kelestarian lingkungan.</p>
+  </section>
+
+  <!-- Main Content - Portfolio Grid -->
+  <main class="container portfolio-grid" id="portfolio-grid-container">
+    <!-- Dynamically filled by JS -->
+    <div style="text-align: center; padding: 100px; color: var(--text-secondary);">
+      <span>Memuat daftar proyek...</span>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="brand-logo">dytanospace</div>
+        <p class="brand-desc">Refleksi, esai, dan opini mengenai persimpangan antara relasi publik, kewirausahaan modern, dan keberlanjutan ekologi.</p>
+      </div>
+      
+      <div>
+        <h3 class="footer-title">Kategori</h3>
+        <ul class="footer-links">
+          <li><a href="index.html#articles-section" onclick="setTimeout(() => document.querySelector('[data-category=bisnis]').click(), 100)">Bisnis & Kewirausahaan</a></li>
+          <li><a href="index.html#articles-section" onclick="setTimeout(() => document.querySelector('[data-category=komunikasi]').click(), 100)">Relasi Publik & Komunikasi</a></li>
+          <li><a href="index.html#articles-section" onclick="setTimeout(() => document.querySelector('[data-category=lingkungan]').click(), 100)">Isu Lingkungan</a></li>
+          <li><a href="index.html#articles-section" onclick="setTimeout(() => document.querySelector('[data-category=opini]').click(), 100)">Opini & Catatan Personal</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-title">Halaman</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="portfolio.html">Portofolio</a></li>
+          <li><a href="contact.html">Kontak & Jadwal</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Rhevalino Armadyta. Hak cipta dilindungi undang-undang.</p>
+      <p>Didesain dengan Keanggunan & Profesionalisme</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  
+  <!-- Inline page script to render projects from data.js -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const projects = window.projectsData || [];
+      const container = document.getElementById("portfolio-grid-container");
+      
+      if (!container) return;
+      
+      if (projects.length === 0) {
+        container.innerHTML = `
+          <div style="text-align: center; padding: 40px; color: var(--text-secondary);">
+            <p>Belum ada portofolio yang dipublikasikan saat ini.</p>
+          </div>
+        `;
+        return;
+      }
+      
+      container.innerHTML = projects.map(project => `
+        <div class="project-item reveal fade-up">
+          <div class="project-image-wrapper">
+            <img src="${project.thumbnail}" alt="${project.title}" class="project-img" onerror="this.src='https://placehold.co/600x400/161616/C68E17?text=Project'">
+          </div>
+          <div class="project-content">
+            <div class="meta-info" style="margin-bottom: 12px;">
+              <span class="badge" style="background-color: var(--accent); color: #000;">${project.category}</span>
+              <span style="color: var(--text-muted); font-size: 0.8rem;">${project.date}</span>
+            </div>
+            
+            <h2 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 16px; line-height: 1.25;">
+              ${project.title}
+            </h2>
+            
+            <p style="color: var(--text-secondary); font-size: 1rem; margin-bottom: 20px;">
+              ${project.summary}
+            </p>
+            
+            <div class="project-meta-table">
+              <span class="project-meta-label">Klien / Sponsor</span>
+              <span class="project-meta-val">${project.client}</span>
+              
+              <span class="project-meta-label">Peran Saya</span>
+              <span class="project-meta-val">${project.role}</span>
+            </div>
+            
+            <div class="project-info-block" style="margin-top: 20px;">
+              <h3>Tantangan (The Challenge)</h3>
+              <p>${project.challenge}</p>
+            </div>
+            
+            <div class="project-info-block">
+              <h3>Solusi & Eksekusi</h3>
+              <p>${project.solution}</p>
+            </div>
+            
+            <div class="project-info-block">
+              <h3>Dampak & Hasil (The Impact)</h3>
+              <div class="project-impact-list">
+                ${project.impact}
+              </div>
+            </div>
+          </div>
+        </div>
+      `).join("");
+      
+      // Setup scroll reveal for rendered items
+      if (typeof setupScrollReveal === "function") {
+        setupScrollReveal();
+      }
+    });
+  </script>
+</body>
+</html>

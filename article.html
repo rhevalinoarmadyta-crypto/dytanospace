@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artikel | dytanospace</title>
+  <meta name="description" content="Baca analisis, opini, dan tulisan mendalam dari Rhevalino Armadyta.">
+  
+  <!-- Styling -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- Marked.js Markdown Parser -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+
+  <!-- Reading Progress Bar -->
+  <div class="progress-bar-container">
+    <div class="progress-bar" id="progress-bar"></div>
+  </div>
+
+  <!-- Sticky Header Nav -->
+  <header>
+    <div class="container nav-container">
+      <span class="logo" id="profile-trigger" role="button" tabindex="0" aria-label="Buka profil pengguna">dytanospace</span>
+
+      <nav>
+        <ul class="nav-links" id="nav-links-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html?cat=news">News</a></li>
+          <li><a href="index.html?cat=business">Business</a></li>
+          <li><a href="index.html?cat=sport">Sport</a></li>
+          <li><a href="index.html?cat=tech">Tech</a></li>
+          <li><a href="index.html?cat=hype">Hype</a></li>
+          <li><a href="index.html?cat=korea">Korea</a></li>
+          <li><a href="index.html?cat=life">Life</a></li>
+          <li><a href="index.html?cat=health">Health</a></li>
+          <li><a href="index.html?cat=automotive">Automotive</a></li>
+          <li><a href="index.html?cat=food">Food</a></li>
+          <li><a href="index.html?cat=travel">Travel</a></li>
+          <li><a href="index.html?cat=science">Science</a></li>
+          <li><a href="index.html?cat=men">Men</a></li>
+          <li><a href="contact.html">Kontak</a></li>
+        </ul>
+      </nav>
+
+      <!-- Hamburger (paling kanan) -->
+      <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+    </div>
+  </header>
+
+  <!-- Article Header (Title, Category, Dates) -->
+  <section class="container reveal fade-up">
+    <div class="article-header">
+      <div id="article-meta" class="article-header-meta">
+        <!-- Dynamically filled by JS -->
+      </div>
+      <h1 id="article-title" class="article-header-title">
+        <!-- Dynamically filled by JS -->
+      </h1>
+    </div>
+    
+    <!-- Featured Image -->
+    <div id="article-featured-image-container" class="article-featured-image reveal">
+      <!-- Dynamically filled by JS -->
+    </div>
+  </section>
+
+  <!-- Core Body Layout -->
+  <main class="container article-body-layout">
+    
+    <!-- Left Column: Floating Table of Contents -->
+    <aside class="toc-container" id="toc-container">
+      <h3 class="toc-title">Daftar Isi</h3>
+      <ul class="toc-list" id="toc-list">
+        <!-- Dynamically filled by JS -->
+      </ul>
+    </aside>
+    
+    <!-- Right Column: Article Serif Text -->
+    <div>
+      <article class="article-text" id="article-text-content">
+        <!-- Dynamically filled by JS -->
+      </article>
+
+      <!-- Author Box bottom -->
+      <div class="author-box-bottom">
+        <img src="file:///Users/rhevalinoarmadytagmail.com/.gemini/antigravity/brain/42aa2b49-3a3a-42ee-83c2-ce8444a3f114/profile_avatar_1781223201095.png" alt="Rhevalino Armadyta" class="author-box-avatar" onerror="this.src='https://placehold.co/80x80/161616/C68E17?text=RA'">
+        <div class="author-box-content">
+          <div class="author-box-title">Tentang Penulis</div>
+          <h3 class="author-box-name">Rhevalino Armadyta</h3>
+          <p class="author-box-bio">Seorang pakar Hubungan Masyarakat (PR) dan konsultan bisnis modern. Menulis untuk membagi ide di persimpangan komunikasi korporat, keberlanjutan ekologis, dan inovasi bisnis.</p>
+          
+          <div class="social-links" style="justify-content: flex-start; gap: 12px;">
+            <a href="#" class="social-icon" style="width: 30px; height: 30px;" aria-label="LinkedIn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="#" class="social-icon" style="width: 30px; height: 30px;" aria-label="Twitter">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Newsletter Sign Up box -->
+      <div class="article-newsletter-box">
+        <h3 class="article-newsletter-title">Dapatkan Tulisan Terkini</h3>
+        <p class="article-newsletter-desc">Berlangganan newsletter mingguan saya untuk mendapatkan esai dan analisis berkualitas langsung di inbox email Anda.</p>
+        <form class="article-newsletter-form">
+          <input type="email" placeholder="Masukkan alamat email Anda..." class="newsletter-input" required>
+          <button type="submit" class="btn">Berlangganan</button>
+        </form>
+        <div class="newsletter-success" style="margin-top: 15px; color: #52c41a;"></div>
+      </div>
+
+      <!-- Comments Section -->
+      <section class="comments-section reveal" id="comments-section">
+        <h3 class="comments-title">Diskusi Pembaca</h3>
+        <form class="comment-form" id="comment-form">
+          <div class="comment-row">
+            <input type="text" id="comment-name" class="comment-input" placeholder="Nama Anda..." required>
+            <input type="email" id="comment-email" class="comment-input" placeholder="Alamat Email (tidak dipublikasikan)...">
+          </div>
+          <textarea id="comment-message" class="comment-input comment-textarea" placeholder="Tulis tanggapan atau opini Anda..." required></textarea>
+          <button type="submit" class="btn" style="align-self: flex-start;">Kirim Tanggapan</button>
+        </form>
+        <div class="comment-feed" id="comment-feed">
+          <!-- Loaded via JS -->
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Floating Action Buttons -->
+  <div class="article-actions-bar">
+    <!-- Theme Toggle (Dark/Sepia/Light) -->
+    <button class="action-btn tooltip" id="theme-toggle" data-tooltip="Tema: Gelap" aria-label="Toggle Theme">🌙</button>
+    
+    <!-- Font scale adjustments -->
+    <button class="action-btn tooltip" id="font-plus-btn" data-tooltip="Perbesar Huruf" aria-label="Increase Font Size">A+</button>
+    <button class="action-btn tooltip" id="font-minus-btn" data-tooltip="Perkecil Huruf" aria-label="Decrease Font Size">A-</button>
+    
+    <div class="toolbar-divider"></div>
+
+    <!-- Distraction-Free Toggle -->
+    <button class="action-btn tooltip" id="distraction-free-toggle" data-tooltip="Mode Bebas Gangguan" aria-label="Toggle Mode Membaca">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+    </button>
+    
+    <!-- Share Button -->
+    <button class="action-btn tooltip" id="share-btn" data-tooltip="Salin Tautan Artikel" aria-label="Share Link" onclick="navigator.clipboard.writeText(window.location.href); alert('Tautan artikel berhasil disalin!');">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
+    </button>
+
+    <!-- Scroll to Top -->
+    <button class="action-btn tooltip" id="back-to-top-btn" data-tooltip="Kembali ke Atas" aria-label="Scroll to Top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+    </button>
+  </div>
+
+  <!-- Related Articles Grid -->
+  <section class="related-section reveal">
+    <div class="container">
+      <h3 class="section-title-alt">Tulisan Terkait Lainnya</h3>
+      <div class="related-grid" id="related-articles-container">
+        <!-- Dynamically filled by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="brand-logo">dytanospace</div>
+        <p class="brand-desc">Refleksi, esai, dan opini mengenai persimpangan antara relasi publik, kewirausahaan modern, dan keberlanjutan ekologi.</p>
+      </div>
+      
+      <div>
+        <h3 class="footer-title">Kategori</h3>
+        <ul class="footer-links">
+          <li><a href="index.html#articles-section" onclick="setTimeout(() => document.querySelector('[data-category=bisnis]').click(), 100)">Bisnis & Kewirausahaan</a></li>
+          <li><a href="index.html#articles-section" onclick="setTimeout(() => document.querySelector('[data-category=komunikasi]').click(), 100)">Relasi Publik & Komunikasi</a></li>
+          <li><a href="index.html#articles-section" onclick="setTimeout(() => document.querySelector('[data-category=lingkungan]').click(), 100)">Isu Lingkungan</a></li>
+          <li><a href="index.html#articles-section" onclick="setTimeout(() => document.querySelector('[data-category=opini]').click(), 100)">Opini & Catatan Personal</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-title">Halaman</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="contact.html">Kontak & Jadwal</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Rhevalino Armadyta. Hak cipta dilindungi undang-undang.</p>
+      <p>Didesain dengan Keanggunan & Profesionalisme</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+  <script src="js/firebase-config.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/article.js"></script>
+</body>
+</html>
